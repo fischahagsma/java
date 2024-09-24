@@ -12,7 +12,8 @@ public class Main{
 	public static void printMatrix(double[][] matrix) {
 		for (var i = 0; i < 20; ++i) {
 			for (var j = 0; j < 14; ++j) {
-				System.out.printf("%.4f   ", matrix[i][j]);	
+				if (matrix[i][j] > 0) System.out.print(" ");
+				System.out.printf("%.4f ", matrix[i][j]);	
 			}
 			System.out.println();
 		}
@@ -33,5 +34,17 @@ public class Main{
 			}
 		}
 		printMatrix(z1);
+		//printMatrix1(z1);
 	}
+	/*
+	public static void printMatrix1(double[][] matrix) {
+		for (double[]  i : matrix){
+			for (double j : i) {
+				if (j > 0) System.out.print(" ");
+				System.out.printf("%.4f ", j);		
+			}
+			System.out.println();
+		}
+	}
+	*/
 }
